@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "title": "Contract",
+    "description": "Contract schema",
+    "type": "object",
+    "properties": {
+        "ContractId": {
+            "description": "The unique identifier for a contract",
+            "type": "string"
+        },
+        "ContractType": {
+            "type": "string"
+        },
+        "Terms": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 2,
+            "uniqueItems": true
+        },
+        "Timestamp": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "ContractId",
+        "ContractType",
+        "Terms",
+        "Timestamp"
+    ]
+}
